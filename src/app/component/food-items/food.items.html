@@ -1,0 +1,12 @@
+<div class="food-items">
+    <ul>
+        <li *ngFor="let item of categories()">
+            <a (click)="categoryFn(item.categoryID)" [class.active]="item.categoryID==intialId()">
+                <span><img src="../assets/{{item.image}}.png" alt="" style="width: 48px; height:48px" /></span>
+
+                {{item.name}}</a>
+        </li>
+
+
+    </ul>
+</div>

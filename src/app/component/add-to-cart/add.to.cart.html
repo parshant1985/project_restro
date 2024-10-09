@@ -1,0 +1,54 @@
+<div class="cart">
+    <div class="modal" *ngIf="orderplaced">
+        <h2>{{textMessage}}</h2>
+    </div>
+
+    <ng-template #nocart>
+        <img src="../assets/my-cart.png" [ngStyle]="{width: '360px', height: '640px'}" />
+    </ng-template>
+
+
+
+    <div class="cards--container" *ngIf="total() else nocart">
+        <div [ngStyle]="{height: '420px',padding:'4px 0 0 0', overflow:'scroll'}">
+            <div class="card" *ngFor="let item of cartItem(); let i=index">
+
+                <div class="item"><img src="../assets/{{item.image}}.png" style="width: 60px;" alt="burger" /></div>
+                <div>
+                    <h3>{{item.name}}</h3>
+                    <span>₹{{item.oriPrice * item.qty}}</span>
+                    <button class="btn-cir" (click)="removeItem(item.id)">x</button>
+                </div>
+                <div>
+                    <button class="btn-cir" (click)="qtyFn('dec',item.id)">-</button>
+                    <span>{{item.qty}}</span>
+                    <button class="btn-cir" (click)="qtyFn('inc',item.id)">+</button>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!--card total-->
+        <div class="sub-total">
+            <div class="item-details">
+                <span>Subtotal</span>
+                <span>₹{{subTotalval()}}</span>
+            </div>
+            <div class="item-details">
+                <span>Tax</span>
+                <span class="tax">₹{{tax()>0?tax():0}}</span>
+            </div>
+            <div class="item-details">
+                <span>Total</span>
+                <span>₹{{total()}}</span>
+            </div>
+
+        </div>
+
+        <button class="btn-submit" (click)="orderPlaced()">Pay</button>
+
+
+    </div>
+
+</div>

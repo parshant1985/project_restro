@@ -1,0 +1,31 @@
+<div style="width: 800px; height: 410px; overflow-y: scroll;">
+    <div class="modal" *ngIf="orderplaced">
+        <h2 [ngStyle]="{color:'red'}"> {{textMessage}}</h2>
+    </div>
+    <ng-template #noitems>
+        <div class="card" style="margin: 50px;">
+            <h2>No Items Available</h2>
+        </div>
+
+    </ng-template>
+    <div class="food-cards" style="width: 1200px;" *ngIf="itemsSignal().length>0 else noitems">
+        <div class="food-card" *ngFor="let item of itemsSignal()" (click)="addCart(item)">
+            <div class="center-img"><img src="../assets/{{item.image}}.png" style="width: 140px;" /></div>
+            <h1>{{item.name}}</h1>
+            <p>{{item.description}}</p>
+            <div class="d-price">
+                <div>
+                    <span><img src="../assets/Star 1.png" alt="" /></span>
+                    <span>{{item.rating}}</span>
+                </div>
+                <div>
+                    <span class="color-red">₹{{item.price}}</span>
+                    <span><img src="../assets/Add.png" /></span>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
