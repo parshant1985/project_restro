@@ -1,0 +1,380 @@
+// Jai shree ram
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+$search: #aaacae;
+$orange-2: #ffebce;
+$orange-1: #f5a62e;
+$grey-2: #ececec;
+$font-family: "Reem Kufi", sans-serif;
+$second-family: "DM Sans", sans-serif;
+$third-family: "Roboto", sans-serif;
+$font3: "Poppins", sans-serif;
+
+
+body {
+    background: #FFEBCE;
+    font-family: "Reem Kufi", sans-serif
+}
+
+.container {
+    margin: 0 4%;
+    overflow: hidden;
+}
+
+.bg {
+    background: #f5f5f5;
+    border-radius: 50px;
+    padding: 20px 0 0 10px;
+    margin: 20px 0 0 0;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.flex-grow-2 {
+    flex-grow: 2;
+}
+
+.flex-grow-1 {
+    flex-grow: 1;
+}
+
+.p-relative {
+    position: relative;
+}
+
+.search--box input {
+    background: #ececec;
+    padding: 20px 50px;
+    border: 1px solid #ddd;
+    outline: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    color: #787878;
+    width: 82%;
+    position: relative;
+
+}
+
+.search--box svg {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 99;
+}
+
+.search--box input::placeholder {
+    color: #aaacae;
+}
+
+.pl-5 {
+    padding-left: 2rem;
+}
+
+.icon {
+    background: $grey-2;
+    border-radius: 20px;
+    padding: 10px 15px;
+    font-size: 30px;
+    margin: 0 15px;
+
+}
+
+.icon:not(.icon ~ .icon):hover {
+    cursor: pointer;
+    opacity: 0.7;
+
+}
+
+.cart {
+    border-radius: 50px;
+    padding: 40px 25px;
+    width: 370px;
+    height: 680px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
+    background: #fff;
+    margin: 0 35px 0 0;
+}
+
+.cart h1 {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 36px;
+    color: #000;
+    text-align: center;
+}
+
+.card {
+    border-radius: 30px;
+
+    height: 110px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+    margin: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 25px;
+
+}
+
+.card span {
+    color: #fe554a;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.cards--container {
+    padding: 10px 0 0 0;
+}
+
+.btn-cir {
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    background: linear-gradient(176deg, #f9881f 0%, #ff774c 100%);
+    color: #fff;
+    font-size: 18px;
+    margin: 0 10px 0 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.sub-total {
+    border: 2px solid $orange-1;
+    border-radius: 20px;
+    margin: 0 20px;
+    height: 130px;
+}
+
+.item-details {
+    display: flex;
+    font-weight: 500;
+    font-size: 24px;
+    letter-spacing: -0.03em;
+    text-align: right;
+    color: #3b3a3a;
+    justify-content: space-between;
+    padding: 10px 15px 0 15px;
+
+
+}
+
+.item-details span.tax {
+    color: #fe5f55;
+    text-emphasis: none;
+
+}
+
+.btn-submit {
+    border-radius: 20px;
+    padding: 15px 100px;
+    height: 85px;
+    box-shadow: 0 10px 30px 0 rgba(202, 66, 17, 0.1);
+    background: linear-gradient(176deg, #f9881f 0%, #c2411a 100%);
+    font-size: 36px;
+    line-height: 152%;
+    letter-spacing: -0.01em;
+    text-align: center;
+    border: none;
+    margin: 25px;
+    width: 325px;
+    color: #f5f5f5;
+}
+
+.btn-submit:hover {
+    cursor: pointer;
+    background: linear-gradient(176deg, #f9881f 0%, #fb7e58 100%);
+}
+
+//banner
+.banner {
+    background: url('./assets/Brand.png') no-repeat;
+    width: 819px;
+    height: 130px;
+    background-size: cover;
+    margin: 20px 0 0 0;
+    display: flex;
+    justify-content: end;
+}
+
+.banner h2 {
+    padding: 0 66px 0 0;
+    justify-content: space-around;
+    align-content: space-around;
+    color: #f5a62d;
+    font-size: 30PX;
+}
+
+.banner h2 span {
+    color: #f2e0db;
+    font-size: 42;
+}
+
+.food-items {
+    padding: 20px 0 0 0;
+}
+
+.food-items ul {
+    list-style: none;
+}
+
+.food-items ul li {
+
+    border: 1px solid #efb9ad;
+    background: #f2e0db;
+    float: left;
+    border-radius: 43%;
+    height: 95px;
+    width: 95px;
+    text-align: center;
+    line-height: 10px;
+    margin-right: 13px;
+    padding: 13px;
+}
+
+.food-items ul li:last-child {
+    margin: 0;
+}
+
+.food-items ul li span {
+    display: block;
+    padding: 10px 0;
+
+}
+
+.food-items ul li a {
+    display: block;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: -0.01em;
+    text-align: center;
+    color: #000;
+    text-decoration: none;
+    border-radius: 48%;
+    padding: 10px;
+}
+
+.food-cards {
+    padding: 100px 2px 0 2px;
+    clear: both;
+    display: flex;
+    gap: 15px;
+    scroll-snap-align: start;
+}
+
+.food-card {
+    text-align: center;
+    position: relative;
+    border-radius: 30px;
+    width: 227px;
+    height: 281px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    background: #fff;
+    display: block;
+
+}
+
+.food-card:hover {
+    background: #ffe2b8;
+    cursor: pointer;
+}
+
+.food-card h1 {
+    font-weight: 500;
+    font-size: 24px;
+    letter-spacing: -0.03em;
+    color: #3d3d3d;
+    padding: 0 20px;
+    text-align: left;
+    line-height: 30px;
+    font-family: $font3;
+}
+
+.food-card p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 152%;
+    letter-spacing: -0.01em;
+    color: #3d3d3d;
+    text-align: left;
+    padding: 5px 20px;
+}
+
+.center-img {
+    position: relative;
+    top: -65px;
+    height: 88px;
+    width: 230px;
+
+}
+
+.d-price {
+    display: flex;
+    justify-content: space-evenly;
+    height: 40px;
+    align-items: center;
+}
+
+.badge {
+    display: inline-block;
+    padding: .35em .65em;
+    font-size: .50em;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25rem;
+    background-color: #dc3545 !important;
+    border-radius: 50rem !important;
+
+    position: absolute !important;
+    left: 100% !important;
+    top: 0 !important;
+    transform: translate(-50%, -50%) !important;
+}
+
+.color-red {
+    font-size: 18px;
+    letter-spacing: -0.03em;
+    color: #fe554a;
+    position: relative;
+    top: -26px;
+    padding: 0 10px;
+}
+
+
+
+
+
+.food-items ul li a:hover,
+.food-items ul li a.active {
+    cursor: pointer;
+    background: rgb(184 224 139);
+}
+
+.modal {
+    background: rgb(0 0 0 / 89%);
+    position: absolute;
+    width: 100%;
+    height: 900px;
+    z-index: 100;
+    color: #1ba134;
+    left: 0;
+    top: 0;
+    font-size: 2rem;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    vertical-align: middle;
+    justify-content: center;
+    bottom: 0;
+
+    overflow: hidden;
+}
