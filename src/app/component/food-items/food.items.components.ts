@@ -17,7 +17,16 @@ export class FoodItemsComponent implements OnInit {
     private service = inject(FoodService)
 
 
-    categories = computed(() => this.service.categories());
+    // categories: any = computed(() => this.service.categories());
+    category: any = [
+        { name: 'Burger', image: 'burger', categoryID: 1001 },
+        { name: 'Pizza', image: 'pizza', categoryID: 1002 },
+        { name: 'Sausage', image: 'saus', categoryID: 1003 },
+        { name: 'Dessert', image: 'ice', categoryID: 1004 },
+        { name: 'Drinks', image: 'drink', categoryID: 1005 },
+        { name: 'Samosa', image: 'tofo', categoryID: 1006 },
+
+    ]
     intialId = computed(() => this.service.intialId())
 
     categoryFn(id: any) {
